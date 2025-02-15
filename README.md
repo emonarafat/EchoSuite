@@ -24,7 +24,7 @@ The system will be built using C# (.NET Core), SQL Server, and React Native. Spe
 ### A. Voice Command Processing
 
 Employees can say:
-"ERP, find customer with phone 01754031344. The customer will buy AFL-SOF-103, a 2-seater made of Mahogany lacquer, light finish, with a 10% discount."
+"ERP, find customer with phone 01754XXXXXX. The customer will buy AFL-SOF-103, a 2-seater made of Mahogany lacquer, light finish, with a 10% discount."
 
 The system will recognize, extract, and process the command.
 
@@ -88,6 +88,14 @@ The system will recognize, extract, and process the command.
 ---
 
 ## 4. System Architecture
+
+| Component                | Technology                          |
+|--------------------------|--------------------------------------|
+| Backend                  | C# (.NET Core)                       |
+| Database                 | SQL Server                           |
+| Mobile App               | React Native                         |
+| Speech Recognition       | Azure Speech API or Google Speech-to-Text |
+| Natural Language Processing | Custom NLP models                  |
 
 ### A. Technology Stack
 
@@ -165,6 +173,7 @@ CREATE TABLE CashFlow (
 
 ## 6. API Design (ASP.NET Core C#)
 
+
 ### Find Customer API
 
 ```csharp
@@ -211,6 +220,33 @@ public IActionResult GenerateInvoice([FromBody] InvoiceRequest request)
 ---
 
 ## 7. Project Timeline & Milestones
+
+| Phase | Timeline | Key Activities | Deliverables | Dependencies |
+|-------|----------|----------------|--------------|--------------|
+| **Foundation** | Weeks 1-4 | - Database schema design<br>- SQL Server setup<br>- API architecture planning<br>- Voice recognition setup<br>- Initial NLP model setup | - Working database<br>- Basic API structure<br>- Voice recognition POC<br>- NLP base model | None |
+| **Core Features** | Weeks 5-8 | - Customer CRUD operations<br>- Product catalog system<br>- Invoice generation logic<br>- Voice command processors | - Customer management system<br>- Product management system<br>- Basic invoice generation<br>- Voice command interface | Foundation Phase |
+| **Mobile Development** | Weeks 9-12 | - React Native setup<br>- Mobile UI development<br>- Offline storage implementation<br>- API integration | - Working mobile app<br>- Offline functionality<br>- Real-time sync capability | Core Features |
+| **Financial Integration** | Weeks 13-16 | - Cash flow system<br>- Ledger implementation<br>- Payment gateway integration<br>- Financial reporting | - Complete financial system<br>- Payment processing<br>- Automated reports | Core Features |
+| **Testing & Refinement** | Weeks 17-20 | - Integration testing<br>- Load testing<br>- Security testing<br>- Performance optimization | - Test reports<br>- Security audit results<br>- Optimized system | All previous phases |
+| **Deployment & Training** | Weeks 21-24 | - Production deployment<br>- Staff training<br>- Documentation<br>- Support system setup | - Live system<br>- Training materials<br>- User manuals<br>- Support desk | Testing & Refinement |
+
+### Key Milestones
+| Milestone | Expected Date | Success Criteria |
+|-----------|---------------|------------------|
+| Database Go-Live | Week 4 | Complete database with test data |
+| Core System Ready | Week 8 | Basic operations working with voice commands |
+| Mobile App Beta | Week 12 | Functional mobile app with core features |
+| Financial System Integration | Week 16 | Complete financial operations capability |
+| System Testing Complete | Week 20 | All test cases passed, security verified |
+| Production Launch | Week 24 | System deployed and staff trained |
+
+### Risk Management
+| Risk | Impact | Mitigation Strategy |
+|------|---------|-------------------|
+| Voice Recognition Accuracy | High | Multiple training iterations, fallback UI options |
+| Data Security | High | Regular security audits, encryption implementation |
+| User Adoption | Medium | Comprehensive training, intuitive UI design |
+| System Performance | Medium | Regular optimization, scalable architecture |
 
 ---
 
